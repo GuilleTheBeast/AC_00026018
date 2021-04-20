@@ -23,7 +23,7 @@
 
         ; 3.Copiar el valor de 202h a DX usando direccionamiento indirecto base más índice.
 
-        mov     SI, 0001h
+        mov     SI, 0001h       
         mov     DL, [BX+SI]
 
         ; 4.Copiar el valor de 203h a DI usando direccionamiento relativo por registro.
