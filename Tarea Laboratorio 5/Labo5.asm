@@ -19,23 +19,27 @@ org 100h
         call    modotexto ; Subrutina encargada de activar el modo texto
 
         iterar:
-                call    escribir ; Llamada a la subrutina para escribir el Nombre
-                MOV     byte [cant],7 ; Cantidad de iteraciones igual a 7
-                MOV     DH,12   ; Estableciendo nueva fila
-                MOV     DL,20   ; Estableciendo columna inicial
+                MOV     byte [cant],9 ; Cantidad de iteraciones igual a 7
+                MOV     DH,02   ; Estableciendo nueva fila
+                MOV     DL,10   ; Estableciendo columna inicial
                 XOR     DI,DI   ; Limpiando puntero
                 call    escribir ; Se vuelve a llamar a la subrutina para escribir el Nombre
-                MOV     byte [cant],7 
-                MOV     DH,14 
-                MOV     DL,20 
+                MOV     byte [cant],6 
+                MOV     DH,04 
+                MOV     DL,10 
                 XOR     DI,DI 
                 call    escribir ; 
                 MOV     byte [cant],5 
-                MOV     DH,16 
-                MOV     DL,20 
+                MOV     DH,06 
+                MOV     DL,10 
+                XOR     DI,DI 
+                call    escribir ;
+                MOV     byte [cant],9
+                MOV     DH,08 
+                MOV     DL,10 
                 XOR     DI,DI 
                 call    escribir ; Cuarta llamada a subrutina para escribir Nombre
-                JMP     esperartecla ; Saltamos a la subrutina 
+                JMP     esperartecla ; Saltamos a la subrutina
         
         escribir:
                 call    movercursor ; Llamada a subrutina 
@@ -77,7 +81,7 @@ org 100h
 
 
 
-    section .data
+        section .data
 
-    nombre      DB      'GuillermoDanielLopezHenriquez' ; Variable con el nombre completo
-    cant        DB       5 ; Variable con numero de iteraciones
+        nombre      DB      'GuillermoDanielLopezHenriquez' ; Variable con el nombre completo
+        cant        DB       5 ; Variable con numero de iteraciones
