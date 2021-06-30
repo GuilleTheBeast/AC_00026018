@@ -16,9 +16,9 @@ org 100h
         int     20h
 
         section .data
-contra          DB      "GuilleTheBeast"
 banner          DB      "Escriba su contraseña: ", "$"
 mensaje1        DB      "Acceso concedido", "$"
+contra          DB      "GuilleTheBeast"
 mensaje2        DB      "Acceso denegado", "$"
 entrada         times   20      DB      " "
 
